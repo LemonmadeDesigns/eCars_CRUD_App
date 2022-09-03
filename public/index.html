@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Custom Cars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQUERY LIBRARIES -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+      crossorigin="anonymous">
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" 
+      crossorigin="anonymous">
+    </script>
+
+    <!-- BOOTSTRAP LIBRARIES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+      crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+      crossorigin="anonymous">
+    </script>
+
+    <!-- GET/POST REQUEST -->
+    <script type="text/javascript" src="/js/vehicleApi.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="col-sm-4">
+        <h3>Welcome to Custom Cars!</h3>
+        <div>      
+            <form id="vehicleForm">
+
+              <!-- CREATE INPUT FOR CAR MAKE -->
+              <div class="form-group">
+                <label for="make">MAKE:</label>
+                <input type="text" class="form-control" id="make" placeholder="Enter make"required/>
+              </div>
+
+              <!-- CREATE INPUT FOR CAR MODEL -->
+              <div class="form-group">
+                <label for="model">MODEL:</label>
+                <input type="text" class="form-control" id="model" placeholder="Enter model" required/>
+              </div>
+
+               <!-- CREATE SELECT INPUT FOR CAR ENGINE SIZE -->
+               <div class="form-group">
+                <label for="engine">ENGINE:</label>
+                <select class="form-control" id="engine">
+                  <option>V6 - Auto Trans 2.5hp</option>
+                  <option>V6 - Manual Trans 4.0hp</option>
+                  <option>V8 - Auto Trans 3.5hp</option>
+                  <option>V8 - Auto Trans 6.4hp</option>
+                  <option>V12 - Manual Trans 6.5hp</option>
+                </select>
+              </div>
+
+              <!-- CREATE SELECT INPUT FOR CAR PAINT -->
+              <div class="form-group">
+                <label for="color">PAINT:</label>
+                <select class="form-control" id="color">
+                  <option>BLACK</option>
+                  <option>WHITE DIAMOND</option>
+                  <option>BLUE (w/ Metallic Flakes)</option>
+                  <option>GOLD (w/ Metallic Flakes)</option>
+                  <option>SILVER (w/ Metallic Flakes)</option>
+                  <option>BURGUNDY (w/ Metallic Flakes)</option>
+                </select>
+                <!-- <input type="text" class="form-control" id="color" placeholder="Enter color" required/> -->
+              </div>
+
+               <!-- CREATE SELECT INPUT FOR CAR TIRES SIZE -->
+               <div class="form-group">
+                <label for="tires">TIRES:</label>
+                <select class="form-control" id="tires">
+                  <option>20 - Asanti</option>
+                  <option>20 - Forgiato</option>
+                  <option>22 - Asanti</option>
+                  <option>22 - Forgiato</option>
+                  <option>24 - Asanti</option>
+                  <option>24 - Forgiato</option>
+                </select>
+              </div>
+
+              <!-- CREATE SUBMIT BUTTON -->  
+              <button type="submit" classn-de="btn btfault">Submit</button>
+            </form>
+        </div>
+
+        <!-- CREATE DIV TO POST RESULTS HERE -->
+        <div id="postResult"></div>
+
+        <br>
+
+        <!-- CREATE BUTTON TO DISPLAY LIST OF VEHICLES -->
+        <div>
+            <button id="allVehicles" type="button" class="btn btn-default">
+              Vehicles
+            </button>
+            <div id="getResultDiv">
+                <ul class="list-group">
+                </ul>
+            </div>
+        </div>
+      </div> 
+    </div>
+
+  </body>
+</html>
